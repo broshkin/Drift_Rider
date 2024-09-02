@@ -1,0 +1,4 @@
+repository "Smth_for_YG@andxreystudio@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
