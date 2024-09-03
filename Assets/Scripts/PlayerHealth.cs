@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         health_text.text = health.ToString() + "HP";
-        if (health <= 0)
+        if (health <= 0 || Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

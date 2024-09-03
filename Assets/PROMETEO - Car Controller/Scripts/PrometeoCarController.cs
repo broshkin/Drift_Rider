@@ -74,6 +74,7 @@ public class PrometeoCarController : MonoBehaviour
       [Space(10)]
       //The following variable lets you to set up particle systems in your car
       public bool useEffects = false;
+    public static bool onGround = true;
 
       // The following particle systems are used as tire smoke when the car drifts.
       public ParticleSystem RLWParticleSystem;
@@ -226,7 +227,7 @@ public class PrometeoCarController : MonoBehaviour
           }
         }
 
-        if(!useEffects){
+        if(!useEffects ){
           if(RLWParticleSystem != null){
             RLWParticleSystem.Stop();
           }
@@ -689,10 +690,10 @@ public class PrometeoCarController : MonoBehaviour
 
       if(useEffects){
         try{
-          if(isDrifting){
+          if(isDrifting && onGround){
             RLWParticleSystem.Play();
             RRWParticleSystem.Play();
-          }else if(!isDrifting){
+          }else if(!isDrifting || !onGround){
             RLWParticleSystem.Stop();
             RRWParticleSystem.Stop();
           }
@@ -701,7 +702,7 @@ public class PrometeoCarController : MonoBehaviour
         }
 
         try{
-          if((isTractionLocked || Mathf.Abs(localVelocityX) > 5f) && Mathf.Abs(carSpeed) > 12f){
+          if((isTractionLocked || Mathf.Abs(localVelocityX) > 5f) && Mathf.Abs(carSpeed) > 12f && onGround){
             RLWTireSkid.emitting = true;
             RRWTireSkid.emitting = true;
           }else {
