@@ -33,4 +33,19 @@ public class PlayerHealth : MonoBehaviour
             health -= Convert.ToInt32(power);
         }
     }
+    public void HealthUp(int count)
+    {
+        if (health + count > 100)
+        {
+            health = 100;
+        }
+        else
+        {
+            health += count;
+        }
+    }
+    public int GetHP()
+    {
+        return health;
+    }
 }
