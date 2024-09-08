@@ -11,9 +11,9 @@ public class CatchHeal : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        gameObject.transform.Rotate(0, 0, 5);
     }
     private void OnTriggerEnter(Collider other)
     {

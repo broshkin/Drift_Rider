@@ -13,7 +13,7 @@ public class LootBoxSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         counter_of_loot.text = "Осталось " + GameObject.FindGameObjectsWithTag("Box").Length.ToString() + " Lit Energy";
     }

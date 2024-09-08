@@ -12,7 +12,7 @@ public class PunchPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         var a = car.transform.position - gameObject.transform.position;
         Debug.DrawRay(transform.position, a + new Vector3(0, 10, 0));

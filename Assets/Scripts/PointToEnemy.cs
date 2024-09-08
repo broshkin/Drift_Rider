@@ -17,7 +17,7 @@ public class PointToEnemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Quaternion _rot = Quaternion.LookRotation(enemy.transform.position - gameObject.transform.position);
         arrow.transform.rotation = Quaternion.Euler(0, Quaternion.Lerp(arrow.transform.rotation, _rot, speed * Time.deltaTime).eulerAngles.y, Quaternion.Lerp(arrow.transform.rotation, _rot, speed * Time.deltaTime).eulerAngles.z);
