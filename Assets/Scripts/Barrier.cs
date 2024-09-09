@@ -13,21 +13,21 @@ public class Barrier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -327)
+        if (transform.position.x < -326)
         {
-            transform.position = new Vector3(-327, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-326, transform.position.y, transform.position.z);
         }
-        if (transform.position.x > 494)
+        if (transform.position.x > 493)
         {
-            transform.position = new Vector3(494, transform.position.y, transform.position.z);
+            transform.position = new Vector3(493, transform.position.y, transform.position.z);
         }
-        if (transform.position.z < -218)
+        if (transform.position.z < -217)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -218);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -217);
         }
-        if (transform.position.z > 194)
+        if (transform.position.z > 192)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 194);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 192);
         }
     }
 }
