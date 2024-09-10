@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System;
+using YG;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -19,7 +20,14 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health_text.text = health.ToString() + "HP";
+        if (YandexGame.EnvironmentData.language == "en")
+        {
+            health_text.text = health.ToString() + "HP";
+        }
+        if (YandexGame.EnvironmentData.language == "ru")
+        {
+            health_text.text = health.ToString() + "’œ";
+        }
         if (health <= 0 || Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

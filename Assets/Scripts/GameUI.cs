@@ -21,9 +21,17 @@ public class GameUI : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void TGButton()
+    {
+        Application.OpenURL("https://t.me/marcostudio");
+    }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex == 1)
         {
             if (Time.timeScale == 1)
             {
