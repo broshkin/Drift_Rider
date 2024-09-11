@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public TextMeshProUGUI health_text;
     [SerializeField]
-    private int health = 100;
+    public static int health = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +28,9 @@ public class PlayerHealth : MonoBehaviour
         {
             health_text.text = health.ToString() + "’œ";
         }
-        if (health <= 0 || Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
+            health = 100;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

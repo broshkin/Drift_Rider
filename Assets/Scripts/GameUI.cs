@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameUI : MonoBehaviour
 {
     public GameObject menuButton;
+    public GameObject winMenu;
+    public GameObject loseMenu;
     public GameObject menu;
 
     public void RestartButton()
     {
         CloseMenu();
+        PlayerHealth.health = 100;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void OpenMenu()
@@ -28,6 +31,10 @@ public class GameUI : MonoBehaviour
     public void TGButton()
     {
         Application.OpenURL("https://t.me/marcostudio");
+    }
+    public void ReturnToMenuButton()
+    {
+        SceneManager.LoadScene(0);
     }
     public void Update()
     {
