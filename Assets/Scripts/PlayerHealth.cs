@@ -11,10 +11,13 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshProUGUI health_text;
     [SerializeField]
     public static int health = 100;
+    public static Vector3 startPos;
+    public static Quaternion startRot;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startPos = transform.position;
+        startRot = transform.rotation;
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             health = 100;
+            Timer.time = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

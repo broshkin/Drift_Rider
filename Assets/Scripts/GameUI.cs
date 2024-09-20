@@ -15,6 +15,8 @@ public class GameUI : MonoBehaviour
         CloseMenu();
         PlayerHealth.health = 100;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Timer.time = 0;
+        Timer.stopTimer = false;
     }
     public void OpenMenu()
     {

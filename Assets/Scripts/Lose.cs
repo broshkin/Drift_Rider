@@ -22,4 +22,14 @@ public class Lose : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+
+    public static void RewardGame()
+    {
+        Time.timeScale = 1;
+        Timer.stopTimer = false;
+        GameObject.Find("Manager").GetComponent<Lose>().loseUI.SetActive(false);
+        PlayerHealth.health = 100;
+        GameObject.Find("CAR (1)").transform.position = PlayerHealth.startPos;
+        GameObject.Find("CAR (1)").transform.rotation = PlayerHealth.startRot;
+    }
 }
