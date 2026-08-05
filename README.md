@@ -2,7 +2,8 @@
 
 An arcade drift game. You drive, things chase you, and you collect loot while staying alive.
 
-**[Play on Yandex Games](https://yandex.ru/games/app/372987)**
+Released on Yandex Games and since taken down from the platform, so there is nothing to play
+here any more. The code is what is left.
 
 ## What is in it
 
@@ -26,8 +27,8 @@ My own code is under `Assets/Scripts/`. `Assets/PROMETEO - Car Controller/` is t
 
 ## When this was made
 
-2024. A small published title rather than a portfolio piece. It is on Yandex Games and it works,
-which at the time was the point.
+2024. A small published title rather than a portfolio piece. It shipped, ran on the platform for
+a while, and is no longer listed there.
 
 ## What I would do differently today
 
