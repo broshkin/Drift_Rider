@@ -1,10 +1,8 @@
 # Drift Rider
 
-An arcade drift game. You drive, things chase you, and you collect loot while staying alive. Published on Yandex Games.
+An arcade drift game. You drive, things chase you, and you collect loot while staying alive.
 
-> add the canonical Yandex Games link here, not the one with `#app=` in it
-
-> screenshot or gameplay gif goes here
+**[Play on Yandex Games](https://yandex.ru/games/app/372987)**
 
 ## What is in it
 
